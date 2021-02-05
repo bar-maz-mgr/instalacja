@@ -68,8 +68,6 @@ if [[ $1 == true ]]; then
     docker container prune -f
     docker image prune -f
     sleep 10
-    docker image pull  misieq/weii_ai_aplikacja_glowna_backend:latest
-    docker image pull  misieq/weii_ai_aplikacja_glowna_frontend:latest
     sleep 15
     docker stack deploy -c docker-compose.yaml app_glowna
     cd ..
@@ -83,8 +81,6 @@ if [[ $2 == true ]]; then
     docker container prune -f
     docker image prune -f
     sleep 15
-    docker image pull  misieq/weii_ai_aplikacja_testujaca_backend:latest
-    docker image pull  misieq/weii_ai_aplikacja_testujaca_frontend:latest
     sleep 10
     docker stack deploy -c docker-compose.yaml app_test
     sleep 10
